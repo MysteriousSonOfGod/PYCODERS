@@ -41,9 +41,9 @@ mycon=mysql.connector.connect(host="localhost", user="root", passwd="Ravi@143", 
 
 cur=mycon.cursor()
 # cur.execute("CREATE database PYTHONDB")
-cur.execute("CREATE TABLE IF NOT EXISTS customers (name VARCHAR(20), address VARCHAR(200))")
+cur.execute("create table Departments (Dept_id int(20) primary key not null, Dept_Name varchar(20) not null)")
 
-c=cur.execute("desc customers")
+c=cur.execute("show tables")
 for i in cur:
     print(i)
 mycon.close()
