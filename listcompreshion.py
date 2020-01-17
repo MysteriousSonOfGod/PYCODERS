@@ -11,7 +11,16 @@
 # print(r)
 
 #Assert Function
-x=3
-y=0
-assert y!=0, "Division by 0 is not support"
-print(x/y)
+# x=3
+# y=0
+# assert y!=0, "Division by 0 is not support"
+# print(x/y)
+
+l=[1,2,3,4,5]
+r=[i for i in l]
+print(r)
+
+
+
+
+
