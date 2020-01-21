@@ -1,0 +1,19 @@
+#INSATLLATION OF PyQt5 in ubuntu 18.04
+sudo apt-get install qttools5-dev-tools
+
+
+
+#The designer is included in the package "qttools5-dev-tools".
+(For Searching Files)
+sudo apt install apt-file
+apt-file search /usr/lib/x86_64-linux-gnu/qt5/bin/designer
+
+
+
+#In the library packed are no binaries for the designer application.
+#Install the designer with
+
+sudo apt-get install qtcreator
+
+
+

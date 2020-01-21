@@ -1,0 +1,16 @@
+Andhra Pradesh, Amaravati, Visakhapatnam
+West Bengal, Kolkata
+Telangana, Hydearabad
+Maharashtra, Mumbai
+kerala, Tiruvananthapuram
+Tamilnadu, Chennai
+Goa, Panaji
+Rajasthan, Jaipur
+Gujarat, GandhiNagar
+Himachal Pradesh, Shimla
+Karnataka, Bangalore
+Arunachal Pradesh, Itanagar
+Bihar, Patna
+Jharkhand, Ranchi
+Chaattisgarh, Naya Raipur
+
