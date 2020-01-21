@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>473</width>
+    <height>408</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>120</y>
+      <width>151</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>18</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Ravi Prasad</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>473</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionEdit"/>
+    <addaction name="actionSave"/>
+    <addaction name="actionSave_as"/>
+    <addaction name="actionopen"/>
+    <addaction name="actioncopy"/>
+    <addaction name="actionpast"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>Edit</string>
+    </property>
+    <widget class="QMenu" name="menuView">
+     <property name="title">
+      <string>View</string>
+     </property>
+     <widget class="QMenu" name="menuFull_View">
+      <property name="title">
+       <string>Full View</string>
+      </property>
+      <widget class="QMenu" name="menuWindows_2">
+       <property name="title">
+        <string>Windows</string>
+       </property>
+       <addaction name="actionWindows8_2"/>
+      </widget>
+      <widget class="QMenu" name="menuLinux_2">
+       <property name="title">
+        <string>Linux</string>
+       </property>
+       <addaction name="actionRedHat"/>
+      </widget>
+      <widget class="QMenu" name="menuUbuntu_2">
+       <property name="title">
+        <string>Ubuntu</string>
+       </property>
+       <addaction name="action14_02"/>
+       <addaction name="action18_02"/>
+       <addaction name="action20_2"/>
+      </widget>
+      <addaction name="menuWindows_2"/>
+      <addaction name="menuLinux_2"/>
+      <addaction name="actionMac"/>
+      <addaction name="menuUbuntu_2"/>
+     </widget>
+     <widget class="QMenu" name="menuSmall_View">
+      <property name="title">
+       <string>Small View</string>
+      </property>
+      <widget class="QMenu" name="menuAndroid">
+       <property name="title">
+        <string>Android</string>
+       </property>
+       <addaction name="actionAndroid1"/>
+       <addaction name="actionAndroid2"/>
+       <addaction name="actionAndroid3"/>
+       <addaction name="actionAndroid4"/>
+       <addaction name="actionAndroid5"/>
+       <addaction name="actionAndroid6"/>
+       <addaction name="actionAndroid7"/>
+       <addaction name="actionAndroid8"/>
+       <addaction name="actionAndroid9"/>
+       <addaction name="actionAndroid10"/>
+      </widget>
+      <widget class="QMenu" name="menuWindows">
+       <property name="title">
+        <string>Windows</string>
+       </property>
+       <addaction name="actionWindows8"/>
+       <addaction name="actionWindows10"/>
+      </widget>
+      <widget class="QMenu" name="menuLinux">
+       <property name="title">
+        <string>Linux</string>
+       </property>
+       <addaction name="actionRedHat7"/>
+      </widget>
+      <widget class="QMenu" name="menuUbuntu">
+       <property name="title">
+        <string>Ubuntu</string>
+       </property>
+       <addaction name="actionUbuntu_14_02"/>
+       <addaction name="actionUbuntu_16_02"/>
+       <addaction name="actionUbuntu_18_02"/>
+       <addaction name="actionUbunut_20_02"/>
+      </widget>
+      <widget class="QMenu" name="menuCentOS">
+       <property name="title">
+        <string>CentOS</string>
+       </property>
+       <addaction name="actionCentOS6"/>
+       <addaction name="actionCentOS7"/>
+      </widget>
+      <addaction name="menuWindows"/>
+      <addaction name="menuLinux"/>
+      <addaction name="actionMac_2"/>
+      <addaction name="menuUbuntu"/>
+      <addaction name="menuCentOS"/>
+      <addaction name="actionFedora"/>
+      <addaction name="actionMint"/>
+      <addaction name="menuAndroid"/>
+     </widget>
+     <addaction name="menuFull_View"/>
+     <addaction name="menuSmall_View"/>
+    </widget>
+    <addaction name="menuView"/>
+    <addaction name="actionPreview"/>
+    <addaction name="actionEditBy"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuEdit"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionEdit">
+   <property name="text">
+    <string>Edit</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </action>
+  <action name="actionSave_as">
+   <property name="text">
+    <string>Save as</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionopen">
+   <property name="text">
+    <string>open</string>
+   </property>
+  </action>
+  <action name="actionPreview">
+   <property name="text">
+    <string>Preview</string>
+   </property>
+  </action>
+  <action name="actionEditBy">
+   <property name="text">
+    <string>EditBy</string>
+   </property>
+  </action>
+  <action name="actionMac">
+   <property name="text">
+    <string>Mac</string>
+   </property>
+  </action>
+  <action name="actionMac_2">
+   <property name="text">
+    <string>Mac</string>
+   </property>
+  </action>
+  <action name="actionFedora">
+   <property name="text">
+    <string>Fedora</string>
+   </property>
+  </action>
+  <action name="actionMint">
+   <property name="text">
+    <string>Mint</string>
+   </property>
+  </action>
+  <action name="actionAndroid1">
+   <property name="text">
+    <string>Android1</string>
+   </property>
+  </action>
+  <action name="actionAndroid2">
+   <property name="text">
+    <string>Android2</string>
+   </property>
+  </action>
+  <action name="actionAndroid3">
+   <property name="text">
+    <string>Android3</string>
+   </property>
+  </action>
+  <action name="actionAndroid4">
+   <property name="text">
+    <string>Android4</string>
+   </property>
+  </action>
+  <action name="actionAndroid5">
+   <property name="text">
+    <string>Android5</string>
+   </property>
+  </action>
+  <action name="actionAndroid6">
+   <property name="text">
+    <string>Android6</string>
+   </property>
+  </action>
+  <action name="actionAndroid7">
+   <property name="text">
+    <string>Android7</string>
+   </property>
+  </action>
+  <action name="actionAndroid8">
+   <property name="text">
+    <string>Android8</string>
+   </property>
+  </action>
+  <action name="actionAndroid9">
+   <property name="text">
+    <string>Android9</string>
+   </property>
+  </action>
+  <action name="actionAndroid10">
+   <property name="text">
+    <string>Android10</string>
+   </property>
+  </action>
+  <action name="actionWindows8">
+   <property name="text">
+    <string>Windows8</string>
+   </property>
+  </action>
+  <action name="actionWindows10">
+   <property name="text">
+    <string>Windows10</string>
+   </property>
+  </action>
+  <action name="actionRedHat7">
+   <property name="text">
+    <string>RedHat7</string>
+   </property>
+  </action>
+  <action name="actionUbuntu_14_02">
+   <property name="text">
+    <string>Ubuntu 14.02</string>
+   </property>
+  </action>
+  <action name="actionUbuntu_16_02">
+   <property name="text">
+    <string>Ubuntu 16.02</string>
+   </property>
+  </action>
+  <action name="actionUbuntu_18_02">
+   <property name="text">
+    <string>Ubuntu 18.02</string>
+   </property>
+  </action>
+  <action name="actionUbunut_20_02">
+   <property name="text">
+    <string>Ubunut 20.02</string>
+   </property>
+  </action>
+  <action name="actionCentOS6">
+   <property name="text">
+    <string>CentOS6</string>
+   </property>
+  </action>
+  <action name="actionCentOS7">
+   <property name="text">
+    <string>CentOS7</string>
+   </property>
+  </action>
+  <action name="actionWindows8_2">
+   <property name="text">
+    <string>Windows8</string>
+   </property>
+  </action>
+  <action name="actionRedHat">
+   <property name="text">
+    <string>RedHat</string>
+   </property>
+  </action>
+  <action name="action14_02">
+   <property name="text">
+    <string>14.02</string>
+   </property>
+  </action>
+  <action name="action18_02">
+   <property name="text">
+    <string>18.02</string>
+   </property>
+  </action>
+  <action name="action20_2">
+   <property name="text">
+    <string>20.2</string>
+   </property>
+  </action>
+  <action name="actioncopy">
+   <property name="text">
+    <string>copy</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+C</string>
+   </property>
+  </action>
+  <action name="actionpast">
+   <property name="text">
+    <string>past</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+P</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

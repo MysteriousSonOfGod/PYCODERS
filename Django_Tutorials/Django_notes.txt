@@ -1,0 +1,19 @@
+1.#WHAT IS DJANGO?
+    Django is a web development framework that assists in building and maintaining quality web applications.
+    Django helps eliminate repetitive tasks making the development process an easy and time saving experience.
+    This tutorial gives a complete understanding of Django.
+    Django comes with a lightweight web server for developing and testing applications. T
+    his server is pre-configured to work with Django, and more importantly, it restarts whenever you modify the code.
+
+
+
+1.#INSTALLATION ON UBUNTU 18.04
+sudo apt-get update
+sudo apt-get upgrade
+python --version
+pip install django==2.1
+
+
+2.#CREATE NEW PROJECT IN DJANGO
+
+
