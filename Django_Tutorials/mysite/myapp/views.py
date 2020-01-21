@@ -9,9 +9,9 @@ class all(views.View):
             k = []
             j = Dreamreal.objects.all()
             for each in j:
-                a = {"website": each.website}
+                a = {"id":each.id, "website": each.website, "mail": each.mail, "name": each.name,"phonenumber":each.phonenumber}
                 k.append(a)
-            return HttpResponse({"data": k})
+            return JsonResponse({"data": k})
 
 
     def post(self, request):
