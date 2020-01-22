@@ -93,19 +93,42 @@
 #     print("THE YEAR IS NOT A LEAP YEAR")
 
 
-#PYTHON PROGRAM TO CHECK WHETHER THE NUMBER IS PRIME OR NOT
-a=11
-if a>1:
-    for i in range(2,a):
-        if a%2==0:
-            print(a,"IS NOT A PRIME NY")
-            break
-    else:
-        print("NUMBER IS PRIME")
+#10.PYTHON PROGRAM TO CHECK WHETHER THE NUMBER IS PRIME OR NOT
+# a=11
+# if a>1:
+#     for i in range(2,a):
+#         if a%2==0:
+#             print(a,"IS NOT A PRIME NY")
+#             break
+#     else:
+#         print("NUMBER IS PRIME")
+# else:
+#     print("IS not prime")
+
+#PRINT ALL PRIME NUMBERS IN THE GIVE LOWER RANGE TO UPPER RANGE
+# l=10
+# u=100
+# for a in range(l, u+1):
+#     if a > 1:
+#         for i in range(2, a):
+#             if a % 2 == 0:
+#                 break
+#         else:
+#             print(a)
+
+
+
+#11.WRITE A PYTHON PROGRAM FACTORIAL
+# What is factorial?
+#
+# Factorial is a non-negative integer. It is the product of all positive integers less than or equal to that number for which you ask for factorial.
+# It is denoted by exclamation sign (!).
+n=5
+f=1
+if n<=0:
+    print("THE NUMBER DOES NOT SUPPORT FACTORAL OPERATION")
 else:
-    print("IS not prime")
-
-
-
-
+    for i in range(1,n+1):
+        f=f*i
+    print(f)
 
