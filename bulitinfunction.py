@@ -90,6 +90,15 @@
 #         else:
 #             e.append(i)
 #
+# rl(l)# l=[[1,2,3],[[[[[[2,3,4,5,6,6]]]]]]]
+# e=[]
+# def rl(l):
+#     for i in l:
+#         if type(i) == list:
+#             rl(i)
+#         else:
+#             e.append(i)
+#
 # rl(l)
 # print(e)
 #
@@ -106,17 +115,20 @@
 # print(e)
 
 
-# t=((((2,4),5,6)),(8,5))
-# e=[]
-# # for i in t:
-# #     for j in i:
-# #         e.append(j)
-# def tp(t):
-#     for i in t:
-#         if type(i)==tuple:
-#             tp(i)
-#         else:
-#             e.append(i)
+t=((((2,4),5,6)),(8,5))
+e=[]
+# for i in t:
+#     for j in i:
+#         e.append(j)
+# print(e)
+def tp(t):
+    for i in t:
+        if type(i)==tuple:
+            tp(i)
+        else:
+            e.append(i)
+tp(t)
+print(tuple(set(e)))
 #
 # tp(t)
 # print(tuple(e))
@@ -134,17 +146,17 @@
 
 
 
-s={"ravi",2,3,4,"ravi"}
-e=[]
-print(s)
-def dl(s):
-    for i in s:
-        if type(i)==set:
-            dl(i)
-        else:
-            e.append(i)
-dl(s)
-print(set(e))
+# s={"ravi",2,3,4,"ravi"}
+# e=[]
+# print(s)
+# def dl(s):
+#     for i in s:
+#         if type(i)==set:
+#             dl(i)
+#         else:
+#             e.append(i)
+# dl(s)
+# print(set(e))
 
 
 

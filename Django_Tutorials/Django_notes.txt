@@ -8,12 +8,39 @@
 
 
 1.#INSTALLATION ON UBUNTU 18.04
-sudo apt-get update
-sudo apt-get upgrade
-python --version
-pip install django==2.1
+    sudo apt-get update
+    sudo apt-get upgrade
+    python --version
+    pip install django==2.1
 
 
 2.#CREATE NEW PROJECT IN DJANGO
+    python -m django startproject mysite
+
+
+3.#CREATE SUPER USER
+    python manage.py migrate
+    python manage.py createsuperuser
+
+
+4.#CREATE NEW APP
+    python manage.py startapp myapp
+
+
+5.#ADD APP NAME IN THE Django_Project settings.py in the line INSTALLED_APPS
+    INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'myapp',#THIS IS MY APP NAME ADDED
+]
+
+
+
+6.# CREATE Sampel View
+
 
 
