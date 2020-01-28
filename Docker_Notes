@@ -1,0 +1,32 @@
+#1.CHECK VERSION.
+  docker --version
+  docker
+ 
+#2.Check Images
+  docker ps -a
+  docker ps
+  docker images
+  
+#3.Pull centos containers 
+  docker pull centos/python-35-centos7
+  docker ps
+  docker images
+  docker run -i -t centos/python-35-centos7:latest /bin/bash
+  
+#4.CREATE DOCKER FILE
+  FROM centos
+  docker -f dockerfile
+  CREATE A FILE
+  docker build directory name
+  
+  
+  
+  
+  
+  copy ./django_classes /opt
+  
+  
+  #DELETE ALL IMAGES IN DOCKER
+    docker system prune -a -f
+    docker exec -i -t docker-container /bin/bash
+    
