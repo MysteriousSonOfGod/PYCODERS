@@ -123,12 +123,101 @@
 #
 # Factorial is a non-negative integer. It is the product of all positive integers less than or equal to that number for which you ask for factorial.
 # It is denoted by exclamation sign (!).
-n=5
-f=1
-if n<=0:
-    print("THE NUMBER DOES NOT SUPPORT FACTORAL OPERATION")
-else:
-    for i in range(1,n+1):
-        f=f*i
-    print(f)
+# n=23
+# f=1
+# if n<=0:
+#     print("THE NUMBER DOES NOT SUPPORT FACTORAL OPERATION")
+# else:
+#     for i in range(1,n+1):
+#         f=f*i
+#     print(f)
 
+
+#NOTE cmath — Mathematical functions for complex numbers. This module is always available.
+# It provides access to mathematical functions for complex numbers.
+# The functions in this module accept integers, floating-point numbers or complex numbers as arguments.
+#USING MATH FUNCTION
+# import math
+# print(math.factorial(-5))
+# print(math.fabs(23.60000))
+
+
+
+#12.MULTIPLICATION TABLE
+# n=5
+# for i in range(1,11):
+#     print(i,"x",n,"=",n*i)
+
+
+
+#13.Fibonacci Series Number
+# nterms=10
+# n1 = 0
+# n2 = 1
+# count = 2
+# if nterms <= 0:
+#    print("Plese enter a positive integer")
+# elif nterms == 1:
+#    print("Fibonacci sequence:")
+#    print(n1)
+# else:
+#    print("Fibonacci sequence:")
+#    print(n1,",",n2,end=', ')
+#    while count < nterms:
+#        nth = n1 + n2
+#        print(nth,end=' , ')
+#        # update values
+#        n1 = n2
+#        n2 = nth
+#        count += 1
+
+
+
+
+#14.For example: 153 is an Armstrong number since 153 = 1*1*1 + 5*5*5 + 3*3*3.
+# n=153
+# sum=0
+# temp=n
+# while temp>0:
+#     di=temp%10
+#     sum=sum+di**3
+#     temp//=10
+# if n==sum:
+#     print("THE NUMBER IS AMSTRONG NUMBER")
+# else:
+#     print("THE NUMBER IS NOT A AMSTRONG NUMBER")
+
+
+#15. SUM OF THE N NATURAL NUMBERS
+# n=10
+# sum=0
+# while(n>0):
+#     sum+=n
+#     print(sum)
+#     n-=1
+# print(sum)
+
+
+
+#16. LCM of two numbers
+def gcd(x,y):
+    if x==0:
+        return y
+    return gcd(y%x, x)
+
+
+def lcm(x,y):
+    return (x*y)/gcd(x,y)
+
+x=8
+y=20
+print(lcm(x,y))
+
+# a=12
+# b=20
+# c=a*b
+# print(c)
+# d=int(c/a)
+# print(d)
+# e=int(c/b)
+# print(e)

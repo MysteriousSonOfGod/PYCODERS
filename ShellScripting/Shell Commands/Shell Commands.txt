@@ -1,0 +1,7 @@
+#1.FIND PARTICULAR FILE LOCATION IN A UBUNTU SYSTEM
+ $find ~/Downloads/extra/ -iname *ravi*.xlsx
+
+#2.HOW TO COPY FILE ONE LOCATION TO ANOTHER LOCATION
+ $cp source_file destinaton_file
+ $cp pand.py /home/ravi/Downloads/extra
+

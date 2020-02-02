@@ -25,7 +25,7 @@ SECRET_KEY = 'ent8!25yw8@_v=_9mgx)j0n$nk@81$)3ed*($y#i3b(%it$_1f'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [ ]
 
 
 # Application definition
@@ -38,7 +38,19 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'myapp',
+    'rest_framework',
+    'rest_framework_swagger',
+
 ]
+
+REST_FRAMEWORK = {
+'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema',
+'DEFAULT_PARSER_CLASSES': [
+        'rest_framework.parsers.FormParser',
+        'rest_framework.parsers.MultiPartParser',
+        'rest_framework.parsers.JSONParser',]
+}
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
