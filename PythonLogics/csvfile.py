@@ -10,8 +10,9 @@ import csv
 path="data.csv"
 file=open(path, newline='')
 reader=csv.reader(file)
-
-header=next(reader)
-data=[row for row in reader]
-print(header)
-print(data[0])
+r=csv.DictReader(file)
+print(list(r))
+# header=next(reader)
+# data=[row for row in reader]
+# print(header)
+# print(data[0])
