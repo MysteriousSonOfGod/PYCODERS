@@ -25,7 +25,7 @@ SECRET_KEY = 'v+i7t)(6zsf-@l$7p3_xi%#wqtk(jr4q7ho-fxl%y$-v6fz&a#'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -47,7 +47,6 @@ INSTALLED_APPS = [
     'SRH',
     'rest_framework',
     'rest_framework_swagger',
-
 ]
 
 REST_FRAMEWORK = {
@@ -70,6 +69,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'IPL.urls'
+CORS_ORIGIN_ALLOW_ALL = True
 
 TEMPLATES = [
     {

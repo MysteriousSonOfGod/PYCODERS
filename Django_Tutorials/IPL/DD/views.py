@@ -11,10 +11,10 @@ class DDPALYERS(GenericAPIView):
     queryset = DDTEAM.objects.all()
 
     def get(self, request):
-        if request.GET['method']=='cskallpayers':
-            result = DDTEAM.objects.all()
-            company_name = DDALL(result, many=True)
-            return JsonResponse(company_name, safe=False)
+    # if request.GET['method']=='cskallpayers':
+        result = DDTEAM.objects.all()
+        company_name = DDALL(result, many=True)
+        return JsonResponse(company_name.data, safe=False)
 
     def post(self, request):
         if request.method == "POST":

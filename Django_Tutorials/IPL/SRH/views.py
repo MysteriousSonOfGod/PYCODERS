@@ -9,17 +9,12 @@ from .models import SRHTEAM
 class SRHPALYERS(GenericAPIView):
     serializer_class = SRHALL
     queryset = SRHTEAM
+    def get(self, request):
+    # if request.GET['method'] == 'rrallplayers':
+        result = SRHTEAM.objects.all()
+        company_name = SRHALL(result, many=True)
+        return JsonResponse(company_name.data, safe=False)
 
-    class RRPLAYERS(GenericAPIView):
-        serializer_class = SRHALL
-        queryset = SRHTEAM.objects.all()
-
-        def get(self, request):
-            if request.GET['method'] == 'rrallplayers':
-                result = SRHTEAM.objects.all()
-                company_name = SRHALL(result, many=True)
-                return JsonResponse(company_name, safe=False)
-
-            def post(self, request):
-                if request.method == "POST":
-                    return HttpResponse('Yes')
+    def post(self, request):
+        if request.method == "POST":
+            return HttpResponse('Yes')

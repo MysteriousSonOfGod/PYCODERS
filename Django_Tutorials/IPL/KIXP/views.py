@@ -10,10 +10,10 @@ class KIXPPALYERS(GenericAPIView):
     queryset = KIXPTEAM.objects.all()
 
     def get(self, request):
-        if request.GET['method'] == 'cskallpayers':
-            result = KIXPTEAM.objects.all()
-            company_name = KIXPALL(result, many=True)
-            return JsonResponse(company_name, safe=False)
+    # if request.GET['method'] == 'cskallpayers':
+        result = KIXPTEAM.objects.all()
+        company_name = KIXPALL(result, many=True)
+        return JsonResponse(company_name.data, safe=False)
 
     def post(self, request):
         if request.method == "POST":

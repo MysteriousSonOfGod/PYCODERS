@@ -17,17 +17,17 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework_swagger.views import get_swagger_view
 
-schema_view=get_swagger_view(title='IPL')
+schema_view=get_swagger_view(title='ravi')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('CSK/', include('CSK.urls')),
     path('DD/', include('DD.urls')),
-    path('KIXP/', include('DD.urls')),
-    path('KKR/', include('DD.urls')),
-    path('MI/', include('DD.urls')),
-    path('RCB/', include('DD.urls')),
-    path('RR/', include('DD.urls')),
-    path('SRH/', include('DD.urls')),
+    path('KIXP/', include('KIXP.urls')),
+    path('KKR/', include('KKR.urls')),
+    path('MI/', include('MI.urls')),
+    path('RCB/', include('RCB.urls')),
+    path('RR/', include('RR.urls')),
+    path('SRH/', include('SRH.urls')),
     path('',schema_view),
 ]

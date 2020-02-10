@@ -1,6 +1,7 @@
-from django.urls import path
+from django.urls import path, include
 from .views import *
+from . import views
 
 urlpatterns=[
-    path("cskallnames/",CSKPALYERS.as_view()),
+    path("all/",CSKPALYERS.as_view()),
 ]

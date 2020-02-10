@@ -4,4 +4,4 @@ from .models import DDTEAM
 class DDALL(serializers.ModelSerializer):
     class Meta:
         model=DDTEAM
-        fielda=['name']
+        fields=['name']
