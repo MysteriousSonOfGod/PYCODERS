@@ -1,13 +1,12 @@
-<<<<<<< HEAD
 from flask import *
 import sqlite3
-
+from allipldata import *
 app = Flask(__name__)
 
 
 @app.route("/")
 def index():
-    return render_template("index.html");
+    return render_template("index.html")
 
 
 @app.route("/add")
@@ -80,12 +79,27 @@ def view():
                 cur = conn.cursor()
                 cur.execute("SELECT * FROM allteams")
                 rows = cur.fetchall()
-                tp=name, ps
-                import pdb
-                pdb.set_trace()
+                tp=name, ps,
                 for i in range(0, len(rows)):
-
-                    pass
+                    if rows[i]==tp:
+                        if name=="CSK":
+                            return render_template("csk.html")
+                        elif name=="DD":
+                            return render_template("dd.html")
+                        elif name=="RCB":
+                            return render_template("rcb.html")
+                        elif name=="MI":
+                            return render_template("mi.html")
+                        elif name=="RR":
+                            return render_template("rr.html")
+                        elif name=="KKR":
+                            return render_template("kkr.html")
+                        elif name=="KIXP":
+                            return render_template("kixp.html")
+                        elif name=="SRH":
+                            return render_template("srh.html")
+                        else:
+                            return render_template("worng.html")
         except:
             conn.rollback()
     # con = sqlite3.connect("employee.db")
@@ -95,6 +109,31 @@ def view():
     # rows = cur.fetchall()
     # return render_template("view.html", rows=rows)
 
+@app.route('/RegisterPlayers')
+def RegisterPlayers():
+    return render_template("cskreg.html")
+
+@app.route("/saveCSK", methods=["POST"])
+def saveCSK():
+    if request.method=='POST':
+        # import pdb
+        # pdb.set_trace()
+        name=request.form['name']
+        ID=request.form['id']
+        price=request.form['price']
+        city=request.form['city']
+        # con = sqlite3.connect('cskipl.db')
+        # cur=con.cursor()
+        # sa = "CREATE TABLE IF NOT EXISTS cskteam (ID INT PRIMARY KEY NOT NULL, palyername VARCHAR(20) NOT NULL, price REAL, city CHAR(50))"
+        # cur.execute(sa)
+        # cur.execute("INSERT into cskteam (ID, palyername, price, city) values (?,?,?,?)", (name,ID,price,city))
+        # con.commit()
+        sav=ATI()
+        return  sav.cskati(name, ID, price, city)
+
+@app.route("/suc")
+def upd():
+    return render_template("csk.html")
 
 @app.route("/delete")
 def delete():
@@ -117,7 +156,7 @@ def deleterecord():
 
 if __name__ == "__main__":
     app.run(debug=True)
-=======
+
 from flask import Flask
 import json
 app=Flask(__name__)
@@ -135,4 +174,4 @@ def vote(age):
 
 if __name__=="__main__":
     app.run(debug=True)
->>>>>>> 770beb5180473b35a4b39d052bef7eb676adc0c8
+

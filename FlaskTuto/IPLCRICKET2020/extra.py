@@ -86,16 +86,23 @@
 # conn.close();
 
 l=[('kal', 'Ravi'), ('kal', 'Ravi'), ('kal', 'Ravi'), ('CSK', 'csk123'), ('CSK', 'csk123'), ('CSK', 'csk123')]
-t=('kal', 'Ravi')
-print(type(t))
+# t=('kal', 'Ravi')
+# print(type(t))
 # for i in range(0, len(l)):
 #     if l[i]==('C', 'csk123'):
 #         print("YES")
 #         break
-name='ravi'
+name='CSK'
 pa='csk123'
 t=name, pa,
-tt=t, t
-d=list(tt)
-print(d)
+for i in range(0, len(l)):
+    # import pdb
+    # pdb.set_trace()
+    if l[i]==t:
+        print("YES")
+        break
+# tt=t, t
+# print(tt)
+# d=list(tt)
+# print(d)
 
