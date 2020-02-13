@@ -25,6 +25,25 @@ def savedetails():
             cursor.execute(postgres_insert_query, record_to_insert)
             # cursor.execute("INSERT INTO allteams (name,password) values({}{})".format(name, psd))
             conn.commit()
+        return render_template("ipl.html")
+
+
+@app.route("/login")
+def login():
+    return render_template("login.html")
+
+@app.route("/vi", methods=["POST"])
+def vi():
+    if request.method=='POST':
+        name = request.form["name"]
+        ps = request.form["ps"]
+        conn = psycopg2.connect(database="postgres", user='postgres', password='Ravi@143', host='127.0.0.1',
+                                port='5432')
+        cursor = conn.cursor()
+        record = """SELECT * FROM allteams"""
+        row=cursor.execute(record)
+        # import pdb
+        # pdb.set_trace()
 
 if __name__=="__main__":
     app.run(debug=True)
