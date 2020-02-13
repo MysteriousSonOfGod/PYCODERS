@@ -36,7 +36,6 @@ def saveDetails():
                     cur.execute("CREATE TABLE IF NOT EXISTS allteams (name VARCHAR(20), password VARCHAR(20))")
                     cur.execute("INSERT into allteams (name,password) values (?,?)", (name, passw))
                     con.commit()
-
             else:
                 msg = "Password is not matching"
         except:
@@ -131,14 +130,25 @@ def saveCSK():
         sav=ATI()
         return  sav.cskati(name, ID, price, city)
 
+@app.route("/delCSK")
+def delCSK():
+    return render_template("cskdel.html")
+
+@app.route("/delCSKP", methods=["POST"])
+def delCSKP():
+    if request.method=='POST':
+        name = request.form['name']
+        ID = request.form['id']
+        sav=ATI()
+        return sav.cskdel(ID)
+
 @app.route("/suc")
 def upd():
     return render_template("csk.html")
 
-@app.route("/delete")
-def delete():
-    return render_template("delete.html")
-
+@app.route("/deleted")
+def delt():
+    return render_template("deletes.html")
 
 @app.route("/deleterecord", methods=["POST"])
 def deleterecord():
@@ -157,21 +167,4 @@ def deleterecord():
 if __name__ == "__main__":
     app.run(debug=True)
 
-from flask import Flask
-import json
-app=Flask(__name__)
-
-@app.route('/home/<name>')
-def home(name):
-   return "Hello "+name
-
-@app.route('/home/<int:age>')
-def vote(age):
-    if age>18:
-        return "YOU ARE THE ELIGIBLE FOR VOTE"
-    else:
-        return "NOT ELIGIBLE"
-
-if __name__=="__main__":
-    app.run(debug=True)
 

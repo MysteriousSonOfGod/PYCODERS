@@ -13,3 +13,9 @@ class ATI:
         self.cursor.execute("INSERT into cskteam (ID, palyername, price, city) values (?,?,?,?)", (ID,name,price,city))
         self.con.commit()
         return upd()
+
+    def cskdel(self, ID):
+        sa="DELETE FROM cskteam WHERE ID = {}".format(ID)
+        self.cursor.execute(sa)
+        self.con.commit()
+        return delt()
