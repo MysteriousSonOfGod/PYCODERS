@@ -63,7 +63,7 @@ import csv
 class csfile:
     d={}
     def csvfile(self):
-        with open("ram.csv",'r') as file:
+        with open("ram.csv", 'r') as file:
             data=csv.DictReader(file)
             for i in data:
                 print(dict(i))

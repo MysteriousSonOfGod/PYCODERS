@@ -55,7 +55,7 @@ import json
 
 import pandas as pd
 
-data = pd.read_csv('ravi.txt', header = None)
+data = pd.read_csv('../ravi.txt', header = None)
 print(data)
 
 

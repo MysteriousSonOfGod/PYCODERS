@@ -1,6 +1,7 @@
 from flask import *
 import sqlite3
 from allipldata import *
+import onetimepad
 app = Flask(__name__)
 
 
@@ -30,11 +31,12 @@ def saveDetails():
             name = request.form["name"]
             passw = request.form["psd"]
             repassw = request.form["repass"]
+            cipher = onetimepad.encrypt(passw, 'random')
             if passw==repassw:
                 with sqlite3.connect("iplteams.db") as con:
                     cur = con.cursor()
-                    cur.execute("CREATE TABLE IF NOT EXISTS allteams (name VARCHAR(20), password VARCHAR(20))")
-                    cur.execute("INSERT into allteams (name,password) values (?,?)", (name, passw))
+                    cur.execute("CREATE TABLE IF NOT EXISTS iplravi (name VARCHAR(50), password VARCHAR(50), cry VARCHAR(50))")
+                    cur.execute("INSERT into iplravi (name,password, cry) values (?,?,?)", (name, passw, cipher))
                     con.commit()
             else:
                 msg = "Password is not matching"
