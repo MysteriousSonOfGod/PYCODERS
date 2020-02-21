@@ -31,6 +31,16 @@ class Country:
 
 purchases = [('Afghanistan', 'Kabul', 'Afghani', 'Pashto'),
              ('Albania', 'Tirane', 'Lek', 'Albanian'),
+            ('Argentina','Buenos Aries', 'Argentine Peso','Spanish'),
+    ('Australia', 'Canberra','Australia Dollar','English'),
+    ('Austria','Vienna','Euro','German'),
+    ('Bangladesh','Dhaka','Taka','Bengali'),
+    ('Belgium','Brussels','Euro','Dutch French German'),
+    ('Bhutan','Thimphu','Bhutanese','Dzongkha'),
+    ('Bolivia','Sucre','Boliviano','Spanish'),
+    ('Brazil','Brasilia','Real','Portuguese'),
+    ('Cambodia','Phnom Penh','Riel','Khmer'),
+    ('Cameroon','Yaounde','Central Africal','French English'),
             ]
 
 re=Country()
