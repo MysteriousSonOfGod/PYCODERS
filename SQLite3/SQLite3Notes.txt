@@ -1,0 +1,20 @@
+---------------------------------DUMP SQLite3 to sql----------------------------------------
+#IN SHELL
+sqlite3 cskipl.db > ravi.sql
+
+----------------------------------OR---------------------------------------------------------
+#SQLite commandline
+sqlite> .output ravi.sql
+sqlite> .dump
+#IN SHELL
+
+----------------------------------RESTORE-----------------------------------------------------
+$ sqlite3 cskipl.db < ravi.sql
+
+----------------------------------Name of the columns-----------------------------------------
+sqlite>SELECT sql FROM sqlite_master WHERE name='Name of the table';
+
+----------------------------------Find Number of Tables in DataBase----------------------------
+sqlite> .tables
+
+----------------------------------
