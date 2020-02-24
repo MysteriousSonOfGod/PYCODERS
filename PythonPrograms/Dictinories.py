@@ -16,3 +16,13 @@ r=iter(n)
 f=iter(m)
 fin=dict(zip(r,f))
 print(fin)
+
+#--------------------------------------------Convert Single List to number of dictionaries------------------------------
+# print("---------------------------MongoDB uses the list of dictionaries--------------------------")
+# l=[1,'kal',2,'ravi',3,'ram']
+# p=[]
+# t=0
+# while t < len(l):
+#     p.append({l[t]:l[t+1]})
+#     t=t+2
+# print(p)

@@ -1,5 +1,8 @@
-l=['devastated', 'నాశనం', 'weird', 'అసహజ', 'embrace', 'ఆలింగనం']
-f=[('CSK', 'csk123', '111205555d5e'), ('DD', 'DD123', '36255f565c'), ('RCB', 'rcb123', '00020c555d5e'), ('KKR', 'kkr123', '190a1c555d5e')]
-it=iter(l)
-t=zip(it,it)
-print(list(t))
+l=[1,'kal',2,'ravi',3,'ram']
+p=[]
+t=0
+while t < len(l):
+    for i in range(1, int(len(l)/2)):
+        p.append({l[t]:l[t+1]})
+        t=t+2
+print(type(p))
