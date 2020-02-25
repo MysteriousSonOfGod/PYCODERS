@@ -1,0 +1,100 @@
+
+csk=[
+('dd', 'csk'),
+('csk', 'rcb'),
+('rcb', 'csk'),
+('csk', 'rr'),
+('rr', 'csk'),
+('csk', 'srh'),
+('srh', 'csk'),
+('csk', 'kixp'),
+('kixp', 'csk'),
+('csk', 'mi'),
+('mi', 'csk'),
+('csk', 'kkr'),
+('kkr', 'csk'),
+('csk', 'kl'),
+('kl', 'csk'),
+('csk', 'vt'),
+('vt', 'csk')]
+
+
+
+dd=[('dd', 'rcb'),
+('rcb', 'dd'),
+('dd', 'rr'),
+('rr', 'dd'),
+('dd', 'srh'),
+('srh', 'dd'),
+('dd', 'kixp'),
+('kixp', 'dd'),
+('dd', 'mi'),
+('mi', 'dd'),
+('dd', 'kkr'),
+('kkr', 'dd'),
+('dd', 'kl'),
+('kl', 'dd'),
+('dd', 'vt'),
+('vt', 'dd'), ]
+
+rcb=[('rcb', 'rr'),
+('rr', 'rcb'),
+('rcb', 'srh'),
+('srh', 'rcb'),
+('rcb', 'kixp'),
+('kixp', 'rcb'),
+('rcb', 'mi'),
+('mi', 'rcb'),
+('rcb', 'kkr'),
+('kkr', 'rcb'),
+('rcb', 'kl'),
+('kl', 'rcb'),
+('rcb', 'vt'),
+('vt', 'rcb'), ]
+
+rr=[('rr', 'srh'),
+('srh', 'rr'),
+('rr', 'kixp'),
+('kixp', 'rr'),
+('rr', 'mi'),
+('mi', 'rr'),
+('rr', 'kkr'),
+('kkr', 'rr'),
+('rr', 'kl'),
+('kl', 'rr'),
+('rr', 'vt'),
+('vt', 'rr'), ]
+
+srh=[('srh', 'kixp'),
+('kixp', 'srh'),
+('srh', 'mi'),
+('mi', 'srh'),
+('srh', 'kkr'),
+('kkr', 'srh'),
+('srh', 'kl'),
+('kl', 'srh'),
+('srh', 'vt'),
+('vt', 'srh'), ]
+
+kixp=[('kixp', 'mi'),
+('mi', 'kixp'),
+('kixp', 'kkr'),
+('kkr', 'kixp'),
+('kixp', 'kl'),
+('kl', 'kixp'),
+('kixp', 'vt'),
+('vt', 'kixp'),]
+mi=[ ('mi', 'kkr'),
+ ('kkr', 'mi'),
+ ('mi', 'kl'),
+ ('kl', 'mi'),
+ ('mi', 'vt'),
+ ('vt', 'mi'), ]
+
+kkr=[('kkr', 'kl'),
+('kl', 'kkr'),
+('kkr', 'vt'),
+('vt', 'kkr'),
+]
+k=[('kl', 'vt'), ('vt', 'kl')]
+
